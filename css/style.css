@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+    "l l l t t t t t t t e1 e1"
+    "l l l t t t t t t t e2 e2"
+    "l l l t t t t t t t e3 e3" ;
+}
+
+.container > div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2rem;
+   color: whitesmoke;
+}
+
+.container > div:nth-child(1) {
+    background-color: teal;
+}
+.container > div:nth-child(2) {
+    background-color: tomato;
+}
+.container > div:nth-child(3) {
+    background-color: rgb(31, 107, 12);
+}
+.container > div:nth-child(4) {
+    background-color: rgb(9, 36, 61);
+}
+.container > div:nth-child(5) {
+    background-color: salmon;
+}
+
+.lol {
+    grid-area: l;
+    
+}
+.todo {
+    grid-area: t;
+}
+.e1 {
+    grid-area: e1;
+}
+.e2 {
+    grid-area: e2;
+}
+.e3 {
+    grid-area: e3;
+}
